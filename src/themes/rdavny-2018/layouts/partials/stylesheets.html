@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="{{ "vendor/sanitize-8.0/sanitize.css" | absURL }}" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%7CTitan+One%7CNoto+Sans" />
+	{{- $style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" />
+	{{- $style := resources.Get "css/mobile.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}" media="(max-width:1000px)" />
